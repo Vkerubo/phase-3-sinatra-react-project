@@ -32,5 +32,6 @@ client4 = Project.create(
 
 puts "Seeding boards..."
 client1_backlog = client1.boards.build(name: 'Backlog')
+client1_todo = client1.boards.build(name: 'To Do')
 
 puts "✅ Done seeding!"
