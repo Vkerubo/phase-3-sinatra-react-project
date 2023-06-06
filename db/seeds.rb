@@ -45,4 +45,6 @@ client3_backlog = client3.boards.build(name: 'Backlog')
 client3_todo = client3.boards.build(name: 'To Do')
 client3_completed = client3.boards.build(name: 'Completed')
 
+puts "Seeding tasks..."
+
 puts "✅ Done seeding!"
