@@ -29,4 +29,8 @@ client4 = Project.create(
     favorite: false,
     color: '#e7aaa2'
 )
+
+puts "Seeding boards..."
+client1_backlog = client1.boards.build(name: 'Backlog')
+
 puts "✅ Done seeding!"
