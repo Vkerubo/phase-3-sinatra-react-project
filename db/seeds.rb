@@ -38,4 +38,5 @@ client1.save
 
 client2_backlog = client2.boards.build(name: 'Backlog')
 client2_todo = client2.boards.build(name: 'To Do')
+client2_completed = client2.boards.build(name: 'Completed')
 puts "✅ Done seeding!"
