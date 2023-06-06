@@ -87,6 +87,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-19
+  x86_64-linux
 
 DEPENDENCIES
   activerecord (~> 6.1)
@@ -98,7 +99,7 @@ DEPENDENCIES
   rake (~> 13.0)
   require_all (~> 3.0)
   rerun
-  rspec (~> 3.10)
+  rspec (~> 3.10.0)
   rspec-json_expectations (~> 2.2)
   sinatra (~> 2.1)
   sinatra-activerecord (~> 2.0)
