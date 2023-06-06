@@ -34,5 +34,5 @@ puts "Seeding boards..."
 client1_backlog = client1.boards.build(name: 'Backlog')
 client1_todo = client1.boards.build(name: 'To Do')
 client1_completed = client1.boards.build(name: 'Completed')
-
+client1.save
 puts "✅ Done seeding!"
