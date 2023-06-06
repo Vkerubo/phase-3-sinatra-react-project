@@ -23,4 +23,10 @@ client3 = Project.create(
     favorite: false,
     color: '#e7aaa2'
 )
+
+client4 = Project.create(
+    title: 'Client 3',
+    favorite: false,
+    color: '#e7aaa2'
+)
 puts "✅ Done seeding!"
