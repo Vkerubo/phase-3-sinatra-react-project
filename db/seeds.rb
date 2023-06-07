@@ -42,6 +42,12 @@ client2.save
 client3_backlog = client3.boards.build(name: 'Backlog')
 client3_todo = client3.boards.build(name: 'To Do')
 client3_completed = client3.boards.build(name: 'Completed')
+client3.save
+
+client4_backlog = client3.boards.build(name: 'Backlog')
+client4_todo = client3.boards.build(name: 'To Do')
+client4_completed = client3.boards.build(name: 'Completed')
+client4.save
 
 puts "Seeding tasks..."
 client3_todo.tasks.build(
