@@ -62,7 +62,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/tasks' do
-    task = Task.create(data)
+    task = Task.create_new_task_with_defaults(data)
     if task.save
       task.to_json
     else
