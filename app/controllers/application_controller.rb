@@ -50,3 +50,8 @@ class ApplicationController < Sinatra::Base
     'Path Not Found'
   end
 end
+
+# GET /projects - get all project
+# PUT /projects - create new project
+# PATCH /project/:id - update project name
+# DELETE /project/:id - delete project (maybe also delete all boards and tasks associated)

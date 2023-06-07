@@ -23,7 +23,7 @@ client3 = Project.create(
 )
 
 client4 = Project.create(
-    title: 'Client 3',
+    title: 'Client 4',
     favorite: false,
     color: '#e7aaa2'
 )
