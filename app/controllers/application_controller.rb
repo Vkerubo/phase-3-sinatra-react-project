@@ -75,3 +75,13 @@ end
       { error: 'Failed to create task' }.to_json
     end
   end
+
+  patch '/tasks/:id' do
+    task = Task.find(params[:id])
+
+    if task.update(data)
+      task.to_json
+    else
+      { error: 'Failed to update task' }.to_json
+    end
+  end
