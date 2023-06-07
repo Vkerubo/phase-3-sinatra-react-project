@@ -118,5 +118,42 @@ client4_todo.tasks.build(
 client4_todo.save
 
 
+client1_todo.tasks.build(
+    name: 'Promo Code Banner - MONEY BACK',
+    due_date: Date.new(2023,11,29),
+    description: 'promo code for money back on orders above 10,000'
+    status: 'Complete',
+    priority: 'High',
+    completed: true
+)
+
+client1_todo.tasks.build(
+    name: 'Website',
+    due_date: Date.new(2023,9,29),
+    description: 'Redesign the website',
+    status: 'In Progress',
+    priority: 'High',
+    completed: false
+)
+
+client1_todo.tasks.build(
+    name: 'Promo Code TEST',
+    due_date: Date.new(2023,9,30),
+    description: 'Generate tests for clients to try, on passing, they get a promo code'
+    status: 'In Progress',
+    priority: 'High',
+    completed: false
+)
+
+client1_todo.tasks.build(
+    name: 'Workspace for Test',
+    due_date: Date.new(2023,9,30),
+    description: '',
+    status: 'Not Started',
+    priority: 'Low',
+    completed: false
+)
+
+client1_todo.save
 
 puts "✅ Done seeding!"
