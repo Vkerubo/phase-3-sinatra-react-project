@@ -96,7 +96,7 @@ end
     end
   end
 
-  # Boards routes
+# Boards routes
   get '/boards' do
     boards = Board.all
     boards.to_json
