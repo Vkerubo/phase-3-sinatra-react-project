@@ -109,7 +109,7 @@ client4_todo.tasks.build(
 client4_todo.tasks.build(
     name: 'Banner - APPLE',
     due_date: Date.new(2023,10,7),
-    description: 'Global Banner - 11% discount on APPLE products'
+    description: 'Global Banner - 11% discount on APPLE products',
     status: 'Not Started',
     priority: 'High',
     completed: false
@@ -121,7 +121,7 @@ client4_todo.save
 client1_todo.tasks.build(
     name: 'Promo Code Banner - MONEY BACK',
     due_date: Date.new(2023,11,29),
-    description: 'promo code for money back on orders above 10,000'
+    description: 'promo code for money back on orders above 10,000',
     status: 'Complete',
     priority: 'High',
     completed: true
@@ -139,7 +139,7 @@ client1_todo.tasks.build(
 client1_todo.tasks.build(
     name: 'Promo Code TEST',
     due_date: Date.new(2023,9,30),
-    description: 'Generate tests for clients to try, on passing, they get a promo code'
+    description: 'Generate tests for clients to try, on passing, they get a promo code',
     status: 'In Progress',
     priority: 'High',
     completed: false
