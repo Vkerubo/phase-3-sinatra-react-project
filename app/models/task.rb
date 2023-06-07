@@ -35,5 +35,15 @@ class Task < ActiveRecord::Base
         priority = hash["priority"] ? hash["priority"] : "Low"
         completed = hash["completed"] ? hash["completed"] : false
 
+        # Creating a new task with the specified attributes
+        self.new(
+            name: name,
+            due_date: hash["due_date"],
+            description: hash["description"],
+            status: status,
+            priority: priority,
+            completed: completed,
+            board_id: hash["board_id"]
+        )
     end
 end
