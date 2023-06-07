@@ -55,3 +55,9 @@ end
 # PUT /projects - create new project
 # PATCH /project/:id - update project name
 # DELETE /project/:id - delete project (maybe also delete all boards and tasks associated)
+
+# Tasks routes
+  get '/tasks' do
+    tasks = Task.all
+    tasks.to_json
+  end
