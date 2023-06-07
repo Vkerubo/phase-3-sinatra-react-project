@@ -7,7 +7,6 @@ class Task < ActiveRecord::Base
     has_one :project, through: :board
 
     # Class method to render all tasks formatted for the frontend
-  def self.render_all_formatted_for_frontend
     def self.render_all_formatted_for_frontend
         self.all.map do |task|
             {
