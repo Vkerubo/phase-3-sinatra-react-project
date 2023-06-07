@@ -28,4 +28,12 @@ class Task < ActiveRecord::Base
         end
     end
 
+     # Class method to create a new task with default values
+    def self.create_new_task_with_defaults(hash)
+        name = hash["name"] ? hash["name"] : "New Task"
+        status = hash["status"] ? hash["status"] : "Not Started"
+        priority = hash["priority"] ? hash["priority"] : "Low"
+        completed = hash["completed"] ? hash["completed"] : false
+
+    end
 end
