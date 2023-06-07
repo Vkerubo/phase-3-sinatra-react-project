@@ -4,7 +4,6 @@ Board.destroy_all
 Project.destroy_all
 
 puts "Seeding projects..."
-
 client1 = Project.create(
   title: "Client 1",
   favorite: false,
@@ -156,4 +155,4 @@ client1_todo.tasks.build(
 
 client1_todo.save
 
-puts "✅ Done seeding!"
+puts "Done seeding!"
