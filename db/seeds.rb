@@ -46,5 +46,13 @@ client3_todo = client3.boards.build(name: 'To Do')
 client3_completed = client3.boards.build(name: 'Completed')
 
 puts "Seeding tasks..."
+client3_todo.tasks.build(
+    name: 'Homepage WK40',
+    due_date: Date.new(2023,9,1),
+    description: '',
+    status: 'Not Started',
+    priority: 'Medium',
+    completed: false
+)
 
 puts "✅ Done seeding!"
