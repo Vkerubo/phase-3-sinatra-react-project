@@ -1,0 +1,52 @@
+require 'sinatra'
+require 'json'
+
+class ApplicationController < Sinatra::Base
+  set :default_content_type, 'application/json'
+
+  get '/' do
+    { message: 'Good luck with your project!' }.to_json
+  end
+
+  # Projects routes
+  get '/projects' do
+    projects = Project.all
+    projects.to_json(include: :tasks)
+  end
+
+  post '/projects' do
+    project = Project.create_new_project_with_defaults(data)
+
+    if project.save
+      project.to_json(include: :tasks)
+    else
+      {error:'Project not created'}.to_json
+    end
+  end
+
+  patch '/projects/:id' do
+    project = Project.find(params[:id])
+
+    if project.update(data)
+      project.to_json
+    else
+      {error: 'Failed to update project.'}.to_json
+      end
+  end
+
+  delete '/projects/:id' do
+    project = Project.find(params[:id])
+
+    if project && project.destroy
+      {message: 'Project successfully deleted', project: project}.to_json
+    else
+      { error: 'Failed to delete project'}.to_json
+    end
+  end
+
+  # Similar implementation for boards and tasks routes
+
+  not_found do
+    'Path Not Found'
+  end
+end
