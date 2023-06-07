@@ -125,3 +125,13 @@ end
       { error: 'Failed to update board' }.to_json
     end
   end
+
+  delete '/boards/:id' do
+    board = Board.find(params[:id])
+
+    if board && board.destroy
+      { message: 'Board successfully deleted', board: board }.to_json
+    else
+      { error: 'Failed to delete board' }.to_json
+    end
+  end
