@@ -115,3 +115,13 @@ end
       { error: 'Failed to create board' }.to_json
     end
   end
+
+  patch '/boards/:id' do
+    board = Board.find(params[:id])
+
+    if board.update(data)
+      board.to_json
+    else
+      { error: 'Failed to update board' }.to_json
+    end
+  end
