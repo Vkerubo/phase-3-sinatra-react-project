@@ -95,3 +95,9 @@ end
       { error: 'Failed to delete task' }.to_json
     end
   end
+
+  # Boards routes
+  get '/boards' do
+    boards = Board.all
+    boards.to_json
+  end
