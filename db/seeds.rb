@@ -58,7 +58,7 @@ client3_todo.tasks.build(
 client3_todo.tasks.build(
     name: 'Rebrand Website',
     due_date: Date.new(2023,10,1),
-    description: '',
+    description: 'Develop a wireframe & UI/UX design',
     status: 'Not Started',
     priority: 'Low',
     completed: false
@@ -66,12 +66,57 @@ client3_todo.tasks.build(
 
 client3_todo.tasks.build(
     name: 'Company flyer',
-    due_date: Date.new(2021,10,1),
+    due_date: Date.new(2023,11,1),
     description: 'Design flyout images',
     status: 'Not Started',
     priority: 'High',
     completed: false
 )
+
+client3_todo.save
+
+
+client3_completed.tasks.build(
+    name: 'Website analytics',
+    due_date: Date.new(2023,11,29),
+    description: '',
+    status: 'Complete',
+    priority: 'Medium',
+    completed: true
+)
+
+client3_completed.save
+
+
+client4_todo.tasks.build(
+    name: 'Homepage Fall 3 WK40',
+    due_date: Date.new(2023,10,1),
+    description: '',
+    status: 'Not Started',
+    priority: 'High',
+    completed: false
+)
+
+client4_todo.tasks.build(
+    name: 'Banner',
+    due_date: Date.new(2023,10,4),
+    description: 'Offering flyout discounts up to 25%',
+    status: 'Not Started',
+    priority: 'Medium',
+    completed: false
+)
+
+client4_todo.tasks.build(
+    name: 'Banner - APPLE',
+    due_date: Date.new(2023,10,7),
+    description: 'Global Banner - 11% discount on APPLE products'
+    status: 'Not Started',
+    priority: 'High',
+    completed: false
+)
+
+client4_todo.save
+
 
 
 puts "✅ Done seeding!"
