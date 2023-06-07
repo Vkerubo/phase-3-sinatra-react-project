@@ -46,10 +46,6 @@ class ApplicationController < Sinatra::Base
 
   # Similar implementation for boards and tasks routes
 
-  not_found do
-    'Path Not Found'
-  end
-end
 
 # GET /projects - get all project
 # PUT /projects - create new project
@@ -135,3 +131,8 @@ end
       { error: 'Failed to delete board' }.to_json
     end
   end
+
+  not_found do
+    'Path Not Found'
+  end
+end
