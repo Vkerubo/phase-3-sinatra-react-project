@@ -55,4 +55,14 @@ client3_todo.tasks.build(
     completed: false
 )
 
+client3_todo.tasks.build(
+    name: 'Rebrand Website',
+    due_date: Date.new(2023,10,1),
+    description: '',
+    status: 'Not Started',
+    priority: 'Low',
+    completed: false
+)
+
+
 puts "✅ Done seeding!"
