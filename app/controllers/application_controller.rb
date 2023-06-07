@@ -14,6 +14,11 @@ class ApplicationController < Sinatra::Base
     projects.to_json(include: :tasks)
   end
 
+  get '/projects/:id' do
+    projects = Project.find(params[:id])
+    projects.to_json
+  end
+
   post '/projects' do
     project = Project.create_new_project_with_defaults(data)
 
