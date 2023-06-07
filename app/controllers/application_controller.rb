@@ -101,3 +101,8 @@ end
     boards = Board.all
     boards.to_json
   end
+
+  get '/boards/:id' do
+    board = Board.find(params[:id])
+    board.to_json
+  end
