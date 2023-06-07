@@ -64,5 +64,14 @@ client3_todo.tasks.build(
     completed: false
 )
 
+client3_todo.tasks.build(
+    name: 'Company flyer',
+    due_date: Date.new(2021,10,1),
+    description: 'Design flyout images',
+    status: 'Not Started',
+    priority: 'High',
+    completed: false
+)
+
 
 puts "✅ Done seeding!"
