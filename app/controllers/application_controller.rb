@@ -85,3 +85,13 @@ end
       { error: 'Failed to update task' }.to_json
     end
   end
+
+  delete '/tasks/:id' do
+    task = Task.find(params[:id])
+
+    if task && task.destroy
+      { message: 'Task successfully deleted', task: task }.to_json
+    else
+      { error: 'Failed to delete task' }.to_json
+    end
+  end
