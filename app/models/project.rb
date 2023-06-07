@@ -11,6 +11,12 @@ class Project < ActiveRecord::Base
         favorite = hash["favorite"] ? hash["favorite"] : false # Assigning a default favorite status if not provided
         color = hash["color"] ? hash["color"] : '#e1bee7'  # Assigning a default color if not provided
 
-
+        # Creating a new project with the specified attributes
+        self.new(
+            title: title,
+            favorite: favorite,
+            color: color
+        )
+    end
 
 end
