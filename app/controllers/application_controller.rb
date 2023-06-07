@@ -106,3 +106,12 @@ end
     board = Board.find(params[:id])
     board.to_json
   end
+
+  post '/boards' do
+    board = Board.create(data)
+    if board.save
+      board.to_json
+    else
+      { error: 'Failed to create board' }.to_json
+    end
+  end
