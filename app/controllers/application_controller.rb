@@ -62,7 +62,16 @@ end
     tasks.to_json
   end
 
-   get '/tasks/:id' do
+  get '/tasks/:id' do
     task = Task.find(params[:id])
     task.to_json
+  end
+
+  post '/tasks' do
+    task = Task.create(data)
+    if task.save
+      task.to_json
+    else
+      { error: 'Failed to create task' }.to_json
+    end
   end
