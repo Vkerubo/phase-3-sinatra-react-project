@@ -32,7 +32,7 @@ class ApplicationController < Sinatra::Base
   patch '/projects/:id' do
     project = Project.find(params[:id])
 
-    if project.update(data)
+    if project.update(params)
       project.to_json
     else
       {error: 'Failed to update project.'}.to_json
