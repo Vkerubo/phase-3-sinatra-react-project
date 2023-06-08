@@ -20,7 +20,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/projects' do
-    project = Project.create_new_project_with_defaults(data)
+    project = Project.create_new_project_with_defaults(params)
 
     if project.save
       project.to_json(include: :tasks)
