@@ -124,7 +124,7 @@ class ApplicationController < Sinatra::Base
   patch '/boards/:id' do
     board = Board.find(params[:id])
 
-    if board.update(data)
+    if board.update(params)
       board.to_json
     else
       { error: 'Failed to update board' }.to_json
