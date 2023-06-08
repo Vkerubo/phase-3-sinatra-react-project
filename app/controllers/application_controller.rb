@@ -113,7 +113,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/boards' do
-    board = Board.create(data)
+    board = Board.create(params)
     if board.save
       board.to_json
     else
