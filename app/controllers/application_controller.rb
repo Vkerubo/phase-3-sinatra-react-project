@@ -67,7 +67,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/tasks' do
-    task = Task.create_new_task_with_defaults(data)
+    task = Task.create_new_task_with_defaults(params)
     if task.save
       task.to_json
     else
@@ -78,7 +78,7 @@ class ApplicationController < Sinatra::Base
   patch '/tasks/:id' do
     task = Task.find(params[:id])
 
-    if task.update(data)
+    if task.update(params)
       task.to_json
     else
       { error: 'Failed to update task' }.to_json
