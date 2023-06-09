@@ -78,3 +78,6 @@ You can make all CRUD calls for the projects database.
 - GET/RETRIEVE all tasks
 - DELETE a task
 - UPDATE a task
+
+##Author
+Vkerubo
